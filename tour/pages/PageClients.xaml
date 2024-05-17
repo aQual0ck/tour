@@ -14,7 +14,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Button Name="btnTours" Content="Туры" Height="20" Margin="5" Width="75" 
-                HorizontalAlignment="Left"/>
+                HorizontalAlignment="Left" Click="btnTours_Click"/>
         <DataGrid Name="dgrClients" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True"
                       SelectedItem="{Binding ChosenItem}">
             <DataGrid.Columns>

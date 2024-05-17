@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\projects\CSharp\tour\tour\App.xaml
-71907195893
+9-228085722
 22006091940
-24-2115048754
+261731974377
 19-789513299
-MainWindow.xaml;pages\PageAdmin.xaml;pages\PageClients.xaml;pages\PageEdit.xaml;pages\PageEditClient.xaml;pages\PageLogin.xaml;pages\PageUser.xaml;
+MainWindow.xaml;pages\PageAdd.xaml;pages\PageAddTour.xaml;pages\PageAdmin.xaml;pages\PageClients.xaml;pages\PageEdit.xaml;pages\PageEditClient.xaml;pages\PageLogin.xaml;pages\PageUser.xaml;
 
 True
 

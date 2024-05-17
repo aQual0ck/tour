@@ -13,8 +13,12 @@
             <RowDefinition Height="60"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Name="btnClients" Content="Клиенты" Height="20" Margin="5" Width="75" 
-                HorizontalAlignment="Left"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="btnClients" Content="Клиенты" Height="20" Margin="5" Width="75" 
+                HorizontalAlignment="Left" Click="btnClients_Click"/>
+            <Button Name="btnAddTour" Content="Добавить тур" Height="20" Margin="5" Width="75"
+                HorizontalAlignment="Left" Click="btnAddTour_Click"/>
+        </StackPanel>
         <DataGrid Name="dgrTours" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True"
                       SelectedItem="{Binding ChosenItem}">
             <DataGrid.Columns>
@@ -23,8 +27,6 @@
                                     Width="*"/>
                 <DataGridTextColumn Header="Город/города" Binding="{Binding City}" 
                                     Width="*"/>
-                <!--<DataGridTextColumn Header="Назначение тура" Binding="{Binding Path=TourTypeName}"
-                                    Width="*"/>-->
                 <DataGridTemplateColumn Header="Назначение тура" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -57,13 +59,6 @@
                 <DataGridTextColumn Header="Транспорт" Binding="{Binding Transport}" 
                                     Width="*"/>
                 <DataGridTextColumn Header="Стоимость" Binding="{Binding Price}" Width="*"/>
-                <!--<DataGridTemplateColumn Header="Изображение" Width="*">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Image Source="{Binding ImageSource}" Width="150" Height="80"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>-->
                 <DataGridTemplateColumn Header="Опции" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -74,6 +69,9 @@
                                 <Button Name="btnDelete" Content="Удалить" 
                                         Click="btnDelete_Click"
                                         Style="{StaticResource btnOptionsDelete}"/>
+                                <Button Name="btnAdd" Content="Добавить клиента"
+                                        Click="btnAdd_Click"
+                                        Style="{StaticResource btnOptionsEdit}"/>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

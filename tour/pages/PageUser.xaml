@@ -9,6 +9,63 @@
       Title="PageUser">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         
+        <DataGrid Name="dgrTours" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True"
+                      SelectedItem="{Binding ChosenItem}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер тура" Binding="{Binding Id}" Width="*"/>
+                <DataGridTextColumn Header="Страна/страны" Binding="{Binding Country}"
+                                    Width="*"/>
+                <DataGridTextColumn Header="Город/города" Binding="{Binding City}" 
+                                    Width="*"/>
+                <DataGridTemplateColumn Header="Назначение тура" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock DataContext="{Binding Path=TourType}">
+                                <TextBlock.Text>
+                                    <Binding Path="TourTypeName"/>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Тип гостиницы" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock DataContext="{Binding Path=HotelType}">
+                                <TextBlock.Text>
+                                    <Binding Path="HotelTypeName"/>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Питание" Binding="{Binding Food}" Width="*"/>
+                <DataGridTextColumn Header="Дата начала тура" 
+                                    Binding="{Binding DateStart, StringFormat=d}"
+                                    Width="*"/>
+                <DataGridTextColumn Header="Дата конца тура" 
+                                    Binding="{Binding DateEnd, StringFormat=d}" 
+                                    Width="*"/>
+                <DataGridTextColumn Header="Транспорт" Binding="{Binding Transport}" 
+                                    Width="*"/>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding Price}" Width="*"/>
+                <DataGridTemplateColumn Header="Опции" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Button Name="btnEdit" Content="Добавить клиента" 
+                                        Click="btnEdit_Click"
+                                        Style="{StaticResource btnOptionsEdit}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

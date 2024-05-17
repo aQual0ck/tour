@@ -23,6 +23,13 @@ namespace tour.pages
         public PageUser()
         {
             InitializeComponent();
+            dgrTours.ItemsSource = important.dbhelper.entObj.Tour.ToList();
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            var item = dgrTours.SelectedItem;
+            important.frameapp.frmObj.Navigate(new PageAdd(item));
         }
     }
 }

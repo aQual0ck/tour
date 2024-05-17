@@ -9,6 +9,34 @@
       Title="PageEditClient">
 
     <Grid>
-        
+        <Button Name="btnBack" Content="Назад" Click="btnBack_Click" 
+                Style="{StaticResource btnTrans}"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Имя:" Width="150"/>
+                <TextBox Text="{Binding FirstName}" Name="txbFirstName" Width="150"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Фамилия:" Width="150"/>
+                <TextBox Text="{Binding LastName}" Name="txbLastName" Width="150"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Номер тура:" Width="150"/>
+                <TextBox Text="{Binding Tour_Id}" Name="txbTour" Width="150"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Номер паспорта:" Width="150"/>
+                <TextBox Text="{Binding PassportNumber}" Name="txbPassport" Width="150"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Номер визы:" Width="150"/>
+                <TextBox Text="{Binding VisaNumber}" Name="txbVisa" Width="150"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Номер страховки:" Width="150"/>
+                <TextBox Text="{Binding InsuranceNumber}" Name="txbInsurance" Width="150"/>
+            </StackPanel>
+            <Button Name="btnSave" Content="Сохранить" Click="btnSave_Click"/>
+        </StackPanel>
     </Grid>
 </Page>

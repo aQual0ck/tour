@@ -32,3 +32,9 @@ D:\projects\CSharp\tour\tour\obj\Debug\tour.csproj.AssemblyReference.cache
 D:\projects\CSharp\tour\tour\obj\Debug\App.baml
 D:\projects\CSharp\tour\tour\obj\Debug\pages\PageEdit.g.cs
 D:\projects\CSharp\tour\tour\obj\Debug\pages\PageEdit.baml
+D:\projects\CSharp\tour\tour\obj\Debug\pages\PageClients.g.cs
+D:\projects\CSharp\tour\tour\obj\Debug\pages\PageEditClient.g.cs
+D:\projects\CSharp\tour\tour\obj\Debug\pages\PageClients.baml
+D:\projects\CSharp\tour\tour\obj\Debug\pages\PageEditClient.baml
+D:\projects\CSharp\tour\tour\obj\Debug\pages\PageAdd.g.cs
+D:\projects\CSharp\tour\tour\obj\Debug\pages\PageAdd.baml

@@ -30,7 +30,7 @@ namespace tour.pages
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             var item = dgrClients.SelectedItem;
-            important.frameapp.frmObj.Navigate(new PageEditClient());
+            important.frameapp.frmObj.Navigate(new PageEditClient(item));
         }
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
@@ -39,8 +39,15 @@ namespace tour.pages
             MessageBoxResult result = MessageBox.Show("Вы уверены?");
             if(result == MessageBoxResult.OK)
             {
-  
+                important.dbhelper.entObj.Clients.Remove(c);
+                important.dbhelper.entObj.SaveChanges();
+                dgrClients.ItemsSource = important.dbhelper.entObj.Clients.ToList();
             }
+        }
+
+        private void btnTours_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -46,5 +46,21 @@ namespace tour.pages
                 dgrTours.ItemsSource = important.dbhelper.entObj.Tour.ToList();
             }
         }
+
+        private void btnClients_Click(object sender, RoutedEventArgs e)
+        {
+            important.frameapp.frmObj.Navigate(new PageClients());
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            var item = dgrTours.SelectedItem;
+            important.frameapp.frmObj.Navigate(new PageAdd(item));
+        }
+
+        private void btnAddTour_Click(object sender, RoutedEventArgs e)
+        {
+            important.frameapp.frmObj.Navigate(new PageAddTour());
+        }
     }
 }

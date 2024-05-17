@@ -20,9 +20,27 @@ namespace tour.pages
     /// </summary>
     public partial class PageEditClient : Page
     {
-        public PageEditClient()
+        private important.Clients c;
+        public PageEditClient(object item)
         {
             InitializeComponent();
+            DataContext = item;
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            c.FirstName = txbFirstName.Text;
+            c.LastName = txbLastName.Text;
+            c.Tour_Id = Convert.ToInt32(txbTour.Text);
+            c.PassportNumber = txbPassport.Text;
+            c.VisaNumber = txbVisa.Text;
+            c.InsuranceNumber = txbInsurance.Text;
+            important.dbhelper.entObj.SaveChanges();
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            important.frameapp.frmObj.Navigate(new PageClients());
         }
     }
 }
